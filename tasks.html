@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks - StudySync</title>
+
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+<nav>
+
+
+<div class="logo">StudySync</div>
+
+<ul>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/notes">Notes</a></li>
+    <li><a href="/tasks">Tasks</a></li>
+    <li><a href="/progress">Progress</a></li>
+    <li><a href="/ai">AI Assistant</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+
+
+</nav>
+
+<div class="container">
+
+
+<h1>📋 Task Manager</h1>
+
+<form method="POST">
+
+    <input
+        type="text"
+        name="task_name"
+        placeholder="Enter Task Name"
+        required>
+
+    <input
+        type="date"
+        name="deadline"
+        required>
+
+    <select name="priority">
+
+        <option value="High">🔴 High Priority</option>
+        <option value="Medium">🟡 Medium Priority</option>
+        <option value="Low">🟢 Low Priority</option>
+
+    </select>
+
+    <button type="submit">
+        Add Task
+    </button>
+
+</form>
+
+<br>
+
+<div class="card">
+
+    <h2>Task Features</h2>
+
+    <p>✔ Assignment Tracking</p>
+    <p>✔ Deadline Management</p>
+    <p>✔ Priority Levels</p>
+    <p>✔ Progress Monitoring</p>
+
+</div>
+
+
+</div>
+
+</body>
+
+</html>

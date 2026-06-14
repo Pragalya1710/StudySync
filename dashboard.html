@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard - StudySync</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+<nav>
+
+
+<div class="logo">
+    StudySync
+</div>
+
+<ul>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/notes">Notes</a></li>
+    <li><a href="/tasks">Tasks</a></li>
+    <li><a href="/progress">Progress</a></li>
+    <li><a href="/ai">AI Assistant</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+
+
+</nav>
+
+<div class="container">
+
+
+<h1>
+    Welcome to StudySync Dashboard
+</h1>
+
+<p style="margin-bottom:25px;">
+    Manage your studies, tasks, notes and AI learning assistant from one place.
+</p>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>📝 Total Notes</h2>
+        <h1>{{ total_notes }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>📋 Total Tasks</h2>
+        <h1>{{ total_tasks }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>⏳ Pending Tasks</h2>
+        <h1>{{ pending_tasks }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>✅ Completed Tasks</h2>
+        <h1>{{ completed_tasks }}</h1>
+    </div>
+
+</div>
+
+<br><br>
+
+<h2>Quick Access</h2>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>📝 Notes Manager</h2>
+        <p>Create and organize study notes.</p>
+        <br>
+        <a href="/notes">
+            <button>Open Notes</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>📋 Task Manager</h2>
+        <p>Track assignments and deadlines.</p>
+        <br>
+        <a href="/tasks">
+            <button>Open Tasks</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>🤖 AI Assistant</h2>
+        <p>Ask questions and get study help.</p>
+        <br>
+        <a href="/ai">
+            <button>Open AI</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>📊 Progress Report</h2>
+        <p>Monitor your productivity.</p>
+        <br>
+        <a href="/progress">
+            <button>View Progress</button>
+        </a>
+       
+    </div>
+    <div class="card">
+    <h2>🧠 AI Quiz</h2>
+    <p>Test your knowledge using AI-generated quizzes.</p>
+
+    <a href="/quiz">
+        <br>
+        <button>Start Quiz</button>
+    </a>
+</div>
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

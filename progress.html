@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Progress - StudySync</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+
+</head>
+
+<body>
+
+<nav>
+
+
+<div class="logo">
+    StudySync
+</div>
+
+<ul>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/notes">Notes</a></li>
+    <li><a href="/tasks">Tasks</a></li>
+    <li><a href="/progress">Progress</a></li>
+    <li><a href="/ai">AI Assistant</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+
+
+</nav>
+
+<div class="container">
+
+
+<h1>📊 Academic Progress Dashboard</h1>
+
+<p style="margin-bottom:20px;">
+    Monitor your productivity and study performance.
+</p>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>📝 Total Notes</h2>
+        <h1>{{ total_notes }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>📋 Total Tasks</h2>
+        <h1>{{ total_tasks }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>⏳ Pending Tasks</h2>
+        <h1>{{ pending_tasks }}</h1>
+    </div>
+
+    <div class="card">
+        <h2>✅ Completed Tasks</h2>
+        <h1>{{ completed_tasks }}</h1>
+    </div>
+
+</div>
+
+<br>
+
+<div class="card">
+
+    <h2>Progress Summary</h2>
+
+    <br>
+
+    <p>
+        Total Notes Created:
+        <strong>{{ total_notes }}</strong>
+    </p>
+
+    <br>
+
+    <p>
+        Total Tasks Managed:
+        <strong>{{ total_tasks }}</strong>
+    </p>
+
+    <br>
+
+    <p>
+        Pending Tasks:
+        <strong>{{ pending_tasks }}</strong>
+    </p>
+
+    <br>
+
+    <p>
+        Completed Tasks:
+        <strong>{{ completed_tasks }}</strong>
+    </p>
+
+</div>
+
+
+</div>
+
+</body>
+
+</html>

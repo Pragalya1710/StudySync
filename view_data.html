@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StudySync Data</title>
+</head>
+<body>
+
+    <h1>My Notes</h1>
+
+    {% for note in notes %}
+        <h3>{{ note[2] }}</h3>
+        <p>{{ note[3] }}</p>
+        <hr>
+    {% endfor %}
+
+    <h1>My Tasks</h1>
+
+    {% for task in tasks %}
+        <h3>{{ task[2] }}</h3>
+        <p>Deadline: {{ task[3] }}</p>
+        <p>Status: {{ task[4] }}</p>
+        <p>Priority: {{ task[5] }}</p>
+        <hr>
+    {% endfor %}
+
+</body>
+</html>

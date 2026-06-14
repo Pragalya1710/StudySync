@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>StudySync AI</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="/">Home</a>
+
+<a href="/notes">Notes</a>
+
+<a href="/tasks">Tasks</a>
+
+<a href="/progress">Progress</a>
+
+<a href="/ai">AI</a>
+
+<a href="/logout">Logout</a>
+
+</nav>
+
+<div class="container">
+
+<h1>StudySync AI Assistant</h1>
+
+<form method="POST">
+
+<textarea
+name="question"
+placeholder="Ask anything..."
+required>
+</textarea>
+
+<br>
+
+<button type="submit">
+Ask AI
+</button>
+
+</form>
+
+{% if answer %}
+
+<div class="answer">
+
+<h3>AI Response</h3>
+
+<p>{{ answer }}</p>
+
+</div>
+
+{% endif %}
+
+<h2>Recent Chats</h2>
+
+{% for chat in history %}
+
+<div class="chat-card">
+
+<b>Question:</b>
+
+<p>{{ chat[1] }}</p>
+
+<b>Answer:</b>
+
+<p>{{ chat[2] }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>
